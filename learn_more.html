@@ -1,0 +1,237 @@
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width,initial-scale=1.0">
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<link rel="icon" type="image/png" href="images/logo/logomark.png">
+			<title>IPINasaya</title>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link rel="stylesheet" href="css/style.css">
+			<link rel="stylesheet" href="https://use.typekit.net/ndu4phi.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		</head>
+		
+		<body id="home-body" onkeydown="closeZoom(event)">
+			<header class="header-nav">
+				<nav>
+			        <ul class='nav-bar'>
+			            <li class='logo'><a href='index.html'><img src="images/logo/main_logo.png"></a></li>
+			            <input type='checkbox' id='check' />
+			            <span class="menu">
+			                <li><a href="index.html">Home</a></li>
+			                <li>
+			                    <label for="btn-1" class="more">About Us +</label>
+			                    <span class="about-us"><a href="about_us.html">About Us</a></span>
+			                    <input type="checkbox" id="btn-1">
+			                    <ul class="navbar-drop">
+
+			                        <li class="navbar-item"><a href="mission.html">Mission and Vision</a></li>
+			                        <li class="navbar-item"><a href="meet.html">Meet the Experts</a></li>
+			                    </ul>
+			                    <ul class="about-mobile">
+			                    	<li class="navbar-item"><a href="about_us.html">About Us</a></li>
+			                        <li class="navbar-item"><a href="mission.html">Mission and Vision</a></li>
+			                        <li class="navbar-item"><a href="meet.html">Meet the Experts</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    <label for="btn-2" class="more">Learn More +</label>
+			                    <span class="learn"><a href="learn_more.html">Learn More</a></span>
+			                    <input type="checkbox" id="btn-2">
+			                    <ul class="navbar-drop">
+			                        <li class="navbar-item"><a href="learn_more_1.html">Dental Health in the Philippines</a></li>
+			                        <li class="navbar-item"><a href="learn_more_2.html">Proper Dental Heath Practices</a></li>
+			                        <li class="navbar-item"><a href="learn_more_3.html">Common Dental Health Problems</a></li>
+			                    </ul>
+			                    <ul class="learn-mobile">
+			                        <li class="navbar-item"><a href="learn_more.html">Learn More</a></li>
+			                        <li class="navbar-item"><a href="learn_more_1.html">Dental Health in the Philippines</a></li>
+			                        <li class="navbar-item"><a href="learn_more_2.html">Proper Dental Heath Practices</a></li>
+			                        <li class="navbar-item"><a href="learn_more_3.html">Common Dental Health Problems</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+								<label for="btn-3" class="more">Discover Stories +</label>
+								<span class="discover"><a href="discover_stories.html">Discover Stories</a></span>
+								<input type="checkbox" id="btn-3">
+								<ul class="navbar-drop">
+							        <li class="navbar-item"><a href="discover_mission.html">Discover Dental Missions</a></li>
+							    </ul>
+							    <ul class="learn-mobile">
+							    	<li class="navbar-item"><a href="discover_stories.html">Discover Stories</a></li>
+							    	<li class="navbar-item"><a href="discover_mission.html">Discover Dental Missions</a></li>
+							    </ul>
+							</li>
+			                <li><a href="contact.html">Contact Us</a></li>
+			                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+			            </span>
+			            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+			        </ul>
+   				</nav>
+			</header>
+
+			<section id="main-learn">
+				<h1 class="learn-title">SITWASYON NG DENTAL HEALTH SA PILIPINAS</h1>
+				<div class="learn-main">
+						<div class="learn-main-img">
+						  <div class="mySlides">
+						    <div class="numbertext">1 / 3</div>
+						    <img src="images/learn/learn_carousel/learn-1.jpg" class="slide-img" onclick="zoom(0)" style="width:100%">
+						  </div>
+
+						  <div class="mySlides">
+						    <div class="numbertext">2 / 3</div>
+						    <img src="images/learn/learn_carousel/learn-2.jpg" class="slide-img" onclick="zoom(1)" style="width:100%" >
+						  </div>
+
+						  <div class="mySlides">
+						    <div class="numbertext">3 / 3</div>
+						    <img src="images/learn/learn_carousel/learn-3.jpg" class="slide-img" onclick="zoom(2)" style="width:100%">
+						  </div>
+						   
+						  <a class="prev" onclick="plusSlides(-1)">❮</a>
+						  <a class="next" onclick="plusSlides(1)">❯</a>
+						</div>
+					<script>
+						let slideIndex = 1;
+						let activeSlide = null;
+						showSlides(slideIndex);
+
+						function plusSlides(n) {
+						  showSlides(slideIndex += n);
+						}
+
+						function currentSlide(n) {
+						  showSlides(slideIndex = n);
+						}
+
+						function zoom(e) {
+							document.body.scrollTop = 0;
+							document.documentElement.scrollTop = 0;
+							document.getElementsByClassName('slide-img')[e].classList.add('zoomed')
+							document.getElementsByClassName('learn-main-img')[0].classList.add('zoomed')
+							document.getElementsByTagName('body')[0].classList.add('no-scroll')
+							activeSlide = e;
+						}
+
+						function closeZoom(event) {
+						  var x = event.keyCode;
+						  if (x == 27) {
+						  	if (activeSlide != null) {
+						  		console.log(activeSlide)
+							  	document.getElementsByClassName('slide-img')[activeSlide].classList.remove('zoomed')
+								document.getElementsByClassName('learn-main-img')[0].classList.remove('zoomed')
+								document.getElementsByTagName('body')[0].classList.remove('no-scroll')
+						  	}
+  						  }
+						}
+
+						function showSlides(n) {
+						  let i;
+						  let slides = document.getElementsByClassName("mySlides");
+						  let dots = document.getElementsByClassName("demo");
+						  let captionText = document.getElementById("caption");
+						  if (n > slides.length) {slideIndex = 1}
+						  if (n < 1) {slideIndex = slides.length}
+						  for (i = 0; i < slides.length; i++) {
+						    slides[i].style.display = "none";
+						  }
+						  for (i = 0; i < dots.length; i++) {
+						    dots[i].className = dots[i].className.replace(" active", "");
+						  }
+						  console.log(slideIndex)
+						  slides[slideIndex-1].style.display = "block";
+						  dots[slideIndex-1].className += " active";
+						  captionText.innerHTML = dots[slideIndex-1].alt;
+						}
+					</script>
+					</div>	
+					<div class="learn-text">
+						<p>Alam niyo ba na <b>87.4%</b> ng mga Pilipino ay mayroong dental caries o tooth decay habang <b>48.3%</b> ay mayroong periodontal diseases o sakit sa bagang. <br><br>I-click ang button sa ibaba upang malaman kung anong nga ba ang sanhi nito at ano ang mga aksyong isinasagawa upang mapigilan ang paglaganap ng mga sakit na ito.</p>
+						<div class="see-more-learn"> 
+							<div class="see-more-disc">
+								<a href="learn_more_1.html">SEE MORE</a>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+
+			<section id="main-learn1">
+				<h1 class="learn1-title">MGA KARANIWANG PROBLEMA SA DENTAL HEALTH SA PILIPINAS</h1>
+				<div class="learn1-main">
+					<div class="learn1-text">
+						<p>Alam niyo ba na ang pagkain ng mga matatamis, paninigarilyo, pag-inom ng alak, at hindi pag-aalaga ngipin ay maaaring humantong sa pagkakaroon ng problema sa ngipin?<br><br>
+						Alamin kung ano ang nagagawa ng mga unhealthy habits na nabanggit sa pagkakaroon ng dental health problems.</p>
+						<div class="see-more-learn1"> 
+							<div class="see-more-disc">
+								<a href="learn_more_3.html">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<img class="learn1-image" src="images/illustrations/illus_3.png">
+				</div>	
+			</section>
+
+			<section id="main-learn2">
+				<div class="learn2-main">
+					<h1 class="learn2-title">MGA TAMANG PARAAN SA PAG-ALAGA NG DENTAL HEALTH</h1>
+					<div class="learn2-content">
+						<img class="learn2-main-img" src="images/illustrations/illus_2.png">
+						<div class="learn2-text">
+							<p>Alam niyo ba ang tamang paraan sa pag-floss at pagsipilyo? <br><br>Basahin at panoorin ang mga infographics at video tutorials na aming inihanda upang matutunan niyo ang tamang paggamit ng floss at sipilyo!</p>
+							<div class="see-more-learn2"> 
+								<div class="see-more-learn2-disc">
+									<a href="learn_more_2.html">SEE MORE</a>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="subfooter">
+				<div class="info-subfooter">
+					<div class="about-subfooter">
+						<span>About Us</span>
+						<p>Ang IPINasaya ay galing sa salitang, “ipin” at “saya”, na nangangahulugang masayang ngipin. Ang layunin ng website na ito ay matulungan ang mga Pilipino na mapanatiling malinis ang kanilang mga ngipin at makamit ang pagkakaroon ng perpekto at masasayang mga ngiti. Sa pamamagitan ng website, makatutulong ito sa pag-promote ng dental health sa mga Pilipino sa paraan na mas mapapadali nitong maipamahagi ang mga impormasyon tungkol sa basic oral health care. Maaari itong gamitin ng mga non-government organizations na magsasagawa ng mga dental missions at turuan ang mga komunidad na pagbibigyan nila ng serbisyo.</p>
+					</div>
+						<nav class="nav-subfooter">
+							<ul class="navbar-subfooter">
+							<div class="vl">
+								<li class="navbar-item activepage">	
+									<span><a href="index.html">Home</a></span>
+								</li>
+								<li class="navbar-item">
+									<span><a href="about_us.html">About Us</a></span>
+								</li>
+								<li class="navbar-item">
+									<span><a href="learn_more.html">Learn More</a></span>
+								</li>
+								<li class="navbar-item">
+									<span><a href="discover_stories.html">Discover Stories</a></span>
+								</li>
+								<li class="navbar-item">
+									<span><a href="contact.html">Contact Us</a></span>
+								</li>
+							</div>
+							</ul>
+						</nav>
+					</div>
+			</section>
+			
+			<footer>
+				<div class="footer">
+					<div class="footer-content">
+						<div class="footer-content-indiv">
+							<span>Copyright © 2023 IPINasaya</span>
+						</div>
+							<div class="footer-content-subindiv">
+							 	<span>Gabay Sa Inyong Ngipin</span>
+							</div>
+					</div>
+				</div>
+			</footer>
+		</body>
+	</html>
